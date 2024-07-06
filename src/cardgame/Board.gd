@@ -23,6 +23,8 @@ func _ready() -> void:
         load_test_cards(false)
     # warning-ignore:return_value_discarded
     $DeckBuilderPopup.connect('popup_hide', self, '_on_DeckBuilder_hide')
+    for i in range(4):
+        $Hand.draw_card($Deck)
 
 
 
@@ -138,3 +140,13 @@ func _on_DeckBuilder_hide() -> void:
 func _on_BackToMain_pressed() -> void:
     cfc.quit_game()
     get_tree().change_scene("res://src/custom/MainMenu.tscn")
+
+
+func _on_Check_pressed() -> void:
+    var slots = $MyBoardPlacementGrid.get_all_slots() 
+    for slot in slots:
+        if not slot.occupying_card:
+            print("no card")
+        else:
+            print(slot.occupying_card)
+

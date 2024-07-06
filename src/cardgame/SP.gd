@@ -16,18 +16,18 @@ const FILTER_DEMONSTRATION = "is_demonstration"
 # This call has been setup to call the original, and allow futher extension
 # simply create new filter
 static func filter_trigger(
-		card_scripts,
-		trigger_card,
-		owner_card,
-		trigger_details) -> bool:
-	var is_valid := .filter_trigger(card_scripts,
-		trigger_card,
-		owner_card,
-		trigger_details)
-	# This is a sample setup of how you would setup a new filter. 
-	# See ScriptProperties for more advanced filters
-	if is_valid and card_scripts.get("filter" + FILTER_DEMONSTRATION) \
-			and card_scripts.get("filter" + FILTER_DEMONSTRATION) != \
-			trigger_details.get(FILTER_DEMONSTRATION):
-		is_valid = false
-	return(is_valid)
+        card_scripts,
+        trigger_card,
+        owner_card,
+        trigger_details) -> bool:
+    var is_valid := .filter_trigger(card_scripts,
+        trigger_card,
+        owner_card,
+        trigger_details)
+    # This is a sample setup of how you would setup a new filter. 
+    # See ScriptProperties for more advanced filters
+    if is_valid and card_scripts.get("filter" + FILTER_DEMONSTRATION) \
+            and card_scripts.get("filter" + FILTER_DEMONSTRATION) != \
+            trigger_details.get(FILTER_DEMONSTRATION):
+        is_valid = false
+    return(is_valid)

@@ -12,9 +12,9 @@ extends Reference
 # * CHANGE is returned when the function modified the card properties in some way
 # * FAILED is returned when the function failed to modify the card for some reason
 enum ReturnCode {
-	OK,
-	CHANGED,
-	FAILED,
+    OK,
+    CHANGED,
+    FAILED,
 }
 # Options for pile shuffle styles.
 # * auto: Will choose a shuffle animation depending on the amount of
@@ -26,13 +26,13 @@ enum ReturnCode {
 # * snap: For serious people with no time to waste.
 # * overhand: Shuffles deck in 3 vertical raises. Best fit for massive amounts (60+)
 enum ShuffleStyle {
-	AUTO,
-	NONE,
-	RANDOM,
-	CORGI,
-	SPLASH,
-	SNAP,
-	OVERHAND,
+    AUTO,
+    NONE,
+    RANDOM,
+    CORGI,
+    SPLASH,
+    SNAP,
+    OVERHAND,
 }
 # This is used to know when to refresh the font size cache, but you can use it
 # for other purposes as well.
@@ -87,7 +87,7 @@ const DECKS_PATH := "user://Decks/"
 const PATH_CORE := "res://src/core/"
 # The path where scenes and scripts customized for this specific game exist
 # (e.g. board, card back etc)
-const PATH_CUSTOM := "res://src/custom/"
+const PATH_CUSTOM := "res://src/cardgame/"
 # The path where card template scenes exist.
 # These is usually one scene per type of card in the game
 const PATH_CARDS := PATH_CUSTOM + "cards/"
@@ -146,7 +146,7 @@ const FOCUSED_SCALE := 1.5
 # More than 0 and the card will appear hidden under the display area.
 #
 # Less than 0 and it will float higher than the bottom of the viewport
-const BOTTOM_MARGIN_MULTIPLIER := 0.5
+const BOTTOM_MARGIN_MULTIPLIER := 0
 # Here you can adjust the amount of offset towards a side of their host card
 # that attachments are placed.
 #
@@ -155,22 +155,22 @@ const BOTTOM_MARGIN_MULTIPLIER := 0.5
 # You define which placement offset an attachment uses by setting the
 # "attachment_offset" exported variable on the card scene
 const ATTACHMENT_OFFSET := [
-	# TOP_LEFT
-	Vector2(-0.2,-0.2),
-	# TOP
-	Vector2(0,-0.2),
-	# TOP_RIGHT
-	Vector2(0.2,-0.2),
-	# RIGHT
-	Vector2(0.2,0),
-	# LEFT
-	Vector2(-0.2,0),
-	# BOTTOM_LEFT
-	Vector2(-0.2,0.2),
-	# BOTTOM
-	Vector2(0,0.2),
-	# BOTTOM_RIGHT
-	Vector2(0.2,0.2),
+    # TOP_LEFT
+    Vector2(-0.2,-0.2),
+    # TOP
+    Vector2(0,-0.2),
+    # TOP_RIGHT
+    Vector2(0.2,-0.2),
+    # RIGHT
+    Vector2(0.2,0),
+    # LEFT
+    Vector2(-0.2,0),
+    # BOTTOM_LEFT
+    Vector2(-0.2,0.2),
+    # BOTTOM
+    Vector2(0,0.2),
+    # BOTTOM_RIGHT
+    Vector2(0.2,0.2),
 ]
 # The colour to use when hovering over a card.
 #
@@ -207,10 +207,10 @@ const TARGETTING_ARROW_COLOUR := TARGET_HOVER_COLOUR
 # * DECREASED: The cost of the card can be paid and is decreased for some reason.
 # * OK: The cost of the card can be paid exactly.
 const CostsState := {
-	"IMPOSSIBLE": Color(1, 0, 0) * 1.3,
-	"INCREASED": Color(1, 0.5, 0) * 1.3,
-	"DECREASED": Color(0.5, 1, 0) * 1.3,
-	"OK": FOCUS_HOVER_COLOUR,
+    "IMPOSSIBLE": Color(1, 0, 0) * 1.3,
+    "INCREASED": Color(1, 0.5, 0) * 1.3,
+    "DECREASED": Color(0.5, 1, 0) * 1.3,
+    "OK": FOCUS_HOVER_COLOUR,
 }
 # This is used when filling in card property labels in [Card].setup()
 # when the property is an array, the label will still display it as a string
@@ -232,14 +232,14 @@ const SHOW_TOKEN_BUTTONS := false
 #
 # This allows us to reuse a token image for more than 1 token type
 const TOKENS_MAP := {
-	'tech': 'blue.svg',
-	'plasma': 'blue.svg',
-	'bio': 'green.svg',
-	'industry': 'grey.svg',
-	'magic': 'purple.svg',
-	'blood': 'red.svg',
-	'gold coin': 'yellow.svg',
-	'void': 'black.svg',
+    'tech': 'blue.svg',
+    'plasma': 'blue.svg',
+    'bio': 'green.svg',
+    'industry': 'grey.svg',
+    'magic': 'purple.svg',
+    'blood': 'red.svg',
+    'gold coin': 'yellow.svg',
+    'void': 'black.svg',
 }
 const STATS_URI := "http://127.0.0.1"
 const STATS_PORT := 8000

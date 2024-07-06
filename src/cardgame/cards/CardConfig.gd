@@ -14,13 +14,13 @@ extends Reference
 # Properties which are placed as they are in appropriate labels
 const PROPERTIES_STRINGS := ["Type", "Requirements", "Abilities"]
 # Properties which are converted into string using a format defined in setup()
-const PROPERTIES_NUMBERS := ["Cost","Power"]
+const PROPERTIES_NUMBERS := ["Cost","Power", "Health"]
 # The name of these properties will be prepended before their value to their label.
 const NUMBER_WITH_LABEL := []
 # Properties provided in a list which are converted into a string for the
 # label text, using the array_join() method
 const PROPERTIES_ARRAYS := ["Tags"]
-	# This property matches the name of the scene file (without the .tcsn file)
+    # This property matches the name of the scene file (without the .tcsn file)
 # which is used as a template For this card.
 const SCENE_PROPERTY = "Type"
 # These are number carrying properties, which we want to hide their label
@@ -42,9 +42,9 @@ const BOOL_PROPERTY_TO_HIDE_IN_CARDVIEWER := "_hide_in_deckbuilder"
 # will add extra info panel with the specified information to the player.
 # See `OVUtils.populate_info_panels()`
 const EXPLANATIONS = {
-	"Tag 1": "Tag 1: You can add extra explanations for tags",
-	"Keyword 1": "Keyword 1: You can specify explanations for keywords that might appear in the text",
-	"Clarification A": "You can even provide longer clarification on card abilities"
+    "Tag 1": "Tag 1: You can add extra explanations for tags",
+    "Keyword 1": "Keyword 1: You can specify explanations for keywords that might appear in the text",
+    "Clarification A": "You can even provide longer clarification on card abilities"
 }
 # Allows the Card object and Card Viewer to replace specific entries during display.
 # For example, you can mark that a cost of 'U' is displayed as an empty string ('').
@@ -67,5 +67,5 @@ const REPLACEMENTS = {}
 # For example, a key of 'damage' in this dictionary, will replace all instances
 # of `{damage}` in card text with the provided bbcode value.
 const CARD_BBCODE := {
-	"damage": "[img={icon_size}]res://assets/icons/broadsword.png[/img]",
+    "damage": "[img={icon_size}]res://assets/icons/broadsword.png[/img]",
 }
